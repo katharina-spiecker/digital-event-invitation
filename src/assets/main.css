@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    background-color: #181818;
+    color: rgba(235, 235, 235, 0.65);
+    min-height: 100vh;
+}
