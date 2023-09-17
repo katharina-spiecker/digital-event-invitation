@@ -1,0 +1,76 @@
+<template>
+    <form class="rsvp-form">
+        <h3 class="mb-3">RSVP</h3>
+        <div class="mb-4">
+            <div class="d-flex justify-content-center">
+                <div class="form-check me-3">
+                    <input class="form-check-input" type="radio" name="rsvp" id="rsvp-attendance-true" value="true" checked>
+                    <label class="form-check-label" for="rsvp-attendance-true">
+                        Yes, I/we will attend!
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rsvp" id="rsvp-attendance-false" value="false">
+                    <label class="form-check-label" for="rsvp-attendance-false">
+                        Unfortunately, I/we cannot make it.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="rsvp-names" class="form-label">Name of guest(s)</label>
+            <input type="text" class="form-control" id="rsvp-names">
+        </div>
+        <div class="mb-4">
+            <label for="rsvp-food" class="form-label">Any food restrictions?</label>
+            <input type="text" class="form-control" id="rsvp-food">
+        </div>
+
+        <CustomButton :text="buttonText"/>
+        
+    </form>
+</template>
+
+<script setup>
+    import CustomButton from './CustomButton.vue';
+
+    const buttonText = "Send";
+</script>
+
+
+<style scoped>
+    .rsvp-form {
+        text-align: center;
+        font-size: 18px;
+    }
+    .form-check-input {
+        background-color: transparent;
+        border: 1px solid var(--default-color);
+    }
+
+    .form-control {
+        background-color: transparent;
+        border: 1px solid var(--default-color);
+        color: var(--default-color);
+    }
+
+    .form-check-label:hover, .form-check-input:hover {
+        cursor: pointer;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 2px var(--default-color);
+    }
+
+    @media (min-width: 992px) {
+        .rsvp-form {
+            margin-left: 40px;
+        }
+    }
+
+</style>

@@ -1,19 +1,36 @@
 <template>
-    <div class="event-info__main">
-        <AnimatedText :text="welcomeText" fadedirection="down" speed="1" delay="1"/>
-        <AnimatedText :text="date" fadedirection="left" speed="1" delay="4"/>
-        <AnimatedText :text="details" fadedirection="right" speed="1" delay="2"/>
-        <AnimatedText :text="location" fadedirection="left" speed="1" delay="5"/>
+    <div class="event-wrapper">
+        <div class="event-info__main">
+            <AnimatedElement fadedirection="down" speed="1" delay="1">
+                <div>{{ welcomeText }}</div>
+            </AnimatedElement>
+            
+            <AnimatedElement fadedirection="left" speed="1" delay="3">
+                <div>{{ date }}</div>
+            </AnimatedElement>
+
+            <AnimatedElement fadedirection="right" speed="1" delay="2">
+                <div>{{ details }}</div>
+            </AnimatedElement>
+
+            <AnimatedElement fadedirection="left" speed="1" delay="3">
+                <div>{{ location }}</div>
+            </AnimatedElement>
+        </div>
+        <AnimatedElement fadedirection="up" speed="1" delay="4">
+            <RsvpForm />
+        </AnimatedElement>
     </div>
 </template>
 
 <script setup>
 
-import AnimatedText from './components/AnimatedText.vue'
-const welcomeText = "Celebrate with us!";
-const date = "Thursday | 12th of July 2023 | 8pm";
-const location = "At Schloss Neuschwanstein";
-const details = "30.  birthday party";
+    import AnimatedElement from './components/AnimatedElement.vue';
+    import RsvpForm from './components/RsvpForm.vue';
+    const welcomeText = "Celebrate with us!";
+    const date = "Thursday | 12th of July 2023 | 8pm";
+    const location = "At Schloss Neuschwanstein";
+    const details = "30th birthday party";
 
 </script>
 
@@ -26,6 +43,14 @@ const details = "30.  birthday party";
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .event-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
     
 </style>

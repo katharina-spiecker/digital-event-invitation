@@ -1,14 +1,13 @@
 <template>
-    <div ref="target" class="animation-section-fade-in">{{ text }}</div>
+    <div ref="target" class="animation-section-fade-in">
+        <slot></slot>
+    </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+
 const props = defineProps({
-    text: {
-        type: String,
-        default: "Celebrate with us!"
-    },
     fadedirection: {
         type: String,
         default: "left"
@@ -33,9 +32,11 @@ function animate() {
     let animationStyle;
 
     if(props.fadedirection == "down") {
-        animationStyle = "downwards-fade-in";
+        animationStyle = "fade-in-down";
     } else if(props.fadedirection == "right") {
         animationStyle = "sideways-fade-in-right";
+    } else if(props.fadedirection == "up") {
+        animationStyle = "fade-in-up";
     } else {
         animationStyle = "sideways-fade-in-left";
     }
@@ -51,13 +52,11 @@ function animate() {
     margin-bottom: 50px;
     font-size: 30px;
     opacity: 0;
-    font-weight: 300;
 }
 
-.downwards-fade-in {
+.fade-in-down {
     animation-name: downwards-fade-in;
     animation-fill-mode: forwards;
-    /* animation-duration: 1s; */
     animation-timing-function: ease-in;
 }
 
@@ -71,10 +70,25 @@ function animate() {
         transform: none;
     }
 }
+.fade-in-up {
+    animation-name: upwards-fade-in;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes upwards-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
 .sideways-fade-in-right {
     animation-name: sideways-fade-in-right;
     animation-fill-mode: forwards;
-    /* animation-duration: 1s; */
     animation-timing-function: ease-in;
 }
 
@@ -92,7 +106,6 @@ function animate() {
 .sideways-fade-in-left {
     animation-name: sideways-fade-in-left;
     animation-fill-mode: forwards;
-    /* animation-duration: 1s; */
     animation-timing-function: ease-in;
 }
 

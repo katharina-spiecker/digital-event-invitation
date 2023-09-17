@@ -8,6 +8,12 @@
   font-weight: normal;
 }
 
+:root {
+    --default-color: #e0dad1a0;;
+    --default-color-dark: #181818;
+    --default-color-strong: #e0dad1;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -18,7 +24,7 @@
 body {
     font-family: 'Handlee', cursive;
     font-size: 16px;
-    background-color: #181818;
-    color: rgba(235, 235, 235, 0.65);
+    background-color: var(--default-color-dark);
+    color: var(--default-color);
     min-height: 100vh;
 }
