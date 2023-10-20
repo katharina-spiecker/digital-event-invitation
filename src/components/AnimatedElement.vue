@@ -8,7 +8,7 @@
 import { ref, onMounted } from 'vue';
 
 const props = defineProps({
-    fadedirection: {
+    fadeDirection: {
         type: String,
         default: "left"
     },
@@ -31,11 +31,11 @@ onMounted(() => {
 function animate() {
     let animationStyle;
 
-    if(props.fadedirection == "down") {
+    if(props.fadeDirection == "down") {
         animationStyle = "fade-in-down";
-    } else if(props.fadedirection == "right") {
+    } else if(props.fadeDirection == "right") {
         animationStyle = "sideways-fade-in-right";
-    } else if(props.fadedirection == "up") {
+    } else if(props.fadeDirection == "up") {
         animationStyle = "fade-in-up";
     } else {
         animationStyle = "sideways-fade-in-left";

@@ -43,6 +43,7 @@
     .rsvp-form {
         text-align: center;
         font-size: 18px;
+        margin-top: 50px;
     }
     .form-check-input {
         background-color: transparent;
@@ -69,7 +70,9 @@
 
     @media (min-width: 992px) {
         .rsvp-form {
-            margin-left: 40px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
