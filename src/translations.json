@@ -1,0 +1,46 @@
+{
+    "en": {
+        "welcomeText": "Celebrate with us!",
+        "date": "Thursday | 12th of July 2028 | 2pm",
+        "details": "Our wedding",
+        "location": "At Schloss Neuschwanstein",
+        "rsvp": {
+            "title": "RSVP",
+            "answerYes": "Yes, I/we will attend!",
+            "answerNo": "Unfortunately, I/we cannot make it.",
+            "guestNames": "Name of guest(s)",
+            "foodRestrictions": "Any food restrictions?"
+        },
+        "info": {
+            "address": {
+                "title": "Address"
+            },
+            "hotel": {
+                "title": "Hotel info",
+                "bookingInstruction": "Click here to reserve room."
+            }
+        }
+    },
+    "de": {
+        "welcomeText": "Feiere mit uns!",
+        "date": "Donnerstag | 12. July 2028 | 14:00",
+        "details": "Unsere Hochzeit",
+        "location": "At Schloss Neuschwanstein",
+        "rsvp": {
+            "title": "RSVP",
+            "answerYes": "Ja!",
+            "answerNo": "Leider nein.",
+            "guestNames": "Namen der Gäste",
+            "foodRestrictions": "Essens Einschränkungen?"
+        },
+        "info": {
+            "address": {
+                "title": "Adresse"
+            },
+            "hotel": {
+                "title": "Hotel Information",
+                "bookingInstruction": "Klicke hier um ein Zimmer zu reservieren."
+            }
+        }
+    }
+}

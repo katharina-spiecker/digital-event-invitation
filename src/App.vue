@@ -2,19 +2,19 @@
     <div class="event-wrapper">
         <div class="event-info__main mb-big">
             <AnimatedElement fadedirection="down" speed="1" delay="0.1">
-                <div>{{ welcomeText }}</div>
+                <div>{{ $t('welcomeText') }}</div>
             </AnimatedElement>
             
             <AnimatedElement fade-direction="left" speed="1" delay="3">
-                <div>{{ date }}</div>
+                <div>{{ $t('date') }}</div>
             </AnimatedElement>
 
             <AnimatedElement fade-direction="right" speed="1" delay="2">
-                <div>{{ details }}</div>
+                <div>{{ $t('details') }}</div>
             </AnimatedElement>
 
             <AnimatedElement fade-direction="left" speed="1" delay="3">
-                <div>{{ location }}</div>
+                <div>{{ $t('location') }}</div>
             </AnimatedElement>
         </div>
 
@@ -36,11 +36,6 @@
     import Timeline from './components/Timeline.vue';
     import Info from './components/Info.vue';
 
-    const welcomeText = "Celebrate with us!";
-    const date = "Thursday | 12th of July 2028 | 8pm";
-    const location = "At Schloss Neuschwanstein";
-    const details = "Our wedding";
-
 </script>
 
 
@@ -57,7 +52,6 @@
 .mb-big {
     margin-bottom: 50px;
 }
-
 
 
 @media (min-width: 992px) {

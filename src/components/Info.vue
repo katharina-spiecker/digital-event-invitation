@@ -1,16 +1,17 @@
 <template>
     <div class="info-wrapper">
         <div class="info-col">
-            <div class="info-title">Address</div>
+            <div class="info-title">{{ $t('info.address.title') }}</div>
             Castle Ravenwood<br>
             123 Enchanted Lane<br>
             Mysticshire, Fabled Kingdom<br>
             Realm of Dreams
         </div>
         <div class="info-col">
-            <div class="info-title">Hotel info</div>
+            <div class="info-title">{{ $t('info.hotel.title') }}</div>
             Hotel Castle Ravenwood<br>
             Click here to reserve room.
+            {{ $t('info.hotel.bookingInstruction') }}
         </div>
     </div>
 </template>
